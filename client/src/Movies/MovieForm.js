@@ -1,5 +1,5 @@
 import React from 'react';
-import axios, * as others from 'axios';
+import axios from 'axios';
 
 class updateMovie extends React.Component {
     constructor(props) {
@@ -25,7 +25,6 @@ class updateMovie extends React.Component {
 
         this.updateMovie = (e) => {
             e.preventDefault()
-            console.log('yo', props)
             axios
                 .put(`http://localhost:5000/api/movies/${this.state.movie.id}`, this.state.movie)
                 .then(res => {
@@ -72,13 +71,8 @@ class updateMovie extends React.Component {
                         onChange={this.handleChange}
                         placeholder="metascore"
                     />
-
                     <button>update</button>
-
-
                 </form>
-
-
             </div>
         );
     }

@@ -9,9 +9,6 @@ export default class MovieList extends Component {
       movies: []
     };
   }
-
-
-
   render() {
     return (
       <div className="movie-list">
